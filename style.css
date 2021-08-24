@@ -2,11 +2,16 @@
 
 body {
   text-align: center;
+  background-image: url("https://media.giphy.com/media/LocR2fUNWyaHw78Xu6/giphy.gif");
+  background-size:20%;
+  background-position: right bottom;
+  background-attachment: fixed;
 }
 
 #title-palindrome-bday {
   font-family: "Roboto Slab", serif;
-  font-size: 350%;
+  font-size: 400%;
+  color: #fff;
 }
 
 input {
@@ -31,5 +36,9 @@ input {
 #result {
   padding-top: 1.5rem;
   font-weight: 600;
-  font-size: 200%;
+  font-size: 350%;
+  color: #fff;
+  border-radius: 1rem;
+  padding-bottom: 2rem;/* top | right | bottom | left */
+  margin: 1rem 8rem 2rem 12rem;
 }
