@@ -156,13 +156,13 @@ function clickHandler(e){
             resultRef.innerText = 'Yay! Your Birthday is a Palindrome!!🥳🥳';
             resultRef.style.backgroundColor = "black";
 
-            gifs.innerHTML = "<img src='https://media.giphy.com/media/vmon3eAOp1WfK/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:350px;max-height:250px;border-radius:15px;'>";
+            gifs.innerHTML = "<img src='https://media.giphy.com/media/vmon3eAOp1WfK/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:700px;max-height:400px;width:100%;border-radius:15px;'>";
         }
         else{
             var [cntr,nextDate] = getNextPalindromeDate(date);
             resultRef.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${cntr} days! 😔`;
             resultRef.style.backgroundColor = "black";
-            gifs.innerHTML = "<img src='https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:350px;max-height:250px;border-radius:15px;'>";
+            gifs.innerHTML = "<img src='https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:700px;max-height:400px;width:100%;border-radius:15px;'>";
         }
     }
 }
