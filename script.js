@@ -204,15 +204,29 @@ function clickHandler(e) {
     } else {
       var [cntrNxt, nextDate] = getNextPalindromeDate(date);
       var [cntrPrev, prevDate] = getPreviousDatePalindrome(date);
-      if (cntrNxt > cntrPrev) {
-        resultRef.innerText = `The next palindrome date is ${prevDate.day}-${prevDate.month}-${prevDate.year}, you missed it by ${cntrPrev} days! 😔`;
+      if ((cntrNxt > cntrPrev) && (cntrPrev>1)) {
+        resultRef.innerText = `The nearest palindrome date is ${prevDate.day}-${prevDate.month}-${prevDate.year}, you missed it by ${cntrPrev} days! 😔`;
         resultRef.style.backgroundColor = "black";
 
         gifs.innerHTML =
           "<img src='https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:700px;max-height:400px;width:100%;border-radius:15px;'>";
-      } else {
-        resultRef.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${cntrNxt} days! 😔`;
+      } else if ((cntrPrev>cntrNxt)&&(cntrNxt>1)) {
+        resultRef.innerText = `The nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${cntrNxt} days! 😔`;
         resultRef.style.backgroundColor = "black";
+        gifs.innerHTML =
+          "<img src='https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:700px;max-height:400px;width:100%;border-radius:15px;'>";
+      }
+      else if(cntrNxt===1){
+        resultRef.innerText = `The nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${cntrNxt} day! 😔`;
+        resultRef.style.backgroundColor = "black";
+        gifs.innerHTML =
+          "<img src='https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:700px;max-height:400px;width:100%;border-radius:15px;'>";
+      }
+      else{
+        resultRef.innerText = `The nearest palindrome date is ${prevDate.day}-${prevDate.month}-${prevDate.year}, you missed it by ${cntrPrev} day! 😔`;
+        resultRef.style.backgroundColor = "black";
+        gifs.innerHTML =
+          "<img src='https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif' style='display:block;margin:1.5rem auto 1rem;max-width:700px;max-height:400px;width:100%;border-radius:15px;'>";
       }
     }
   }
