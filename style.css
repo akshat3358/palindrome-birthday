@@ -27,10 +27,11 @@ input {
 }
 
 #show-btn {
-  font-size: 200%;
+  font-size: 250%;
   border-radius: 0.5rem;
   border: 3px solid goldenrod;
-  background-color: aqua;
+  color: #fff;
+  background-color:dimgray;
 }
 
 #result {
